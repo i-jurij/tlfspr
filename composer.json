@@ -1,0 +1,35 @@
+{
+    "name": "ijurij/tlfspr",
+    "type": "project",
+    "description": "The PHP web application.",
+    "keywords": [
+        "phone directory"
+    ],
+    "license": "Apache-2.0",
+    "require": {
+        "php": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "App\\Controllers\\": "app/controllers",
+            "App\\Lib\\": "app/lib",
+            "App\\Lib\\Traits\\": "app/lib/traits",
+            "App\\Models\\": "app/models"
+        },
+        "files": [
+            "app/configs/config.php",
+            "app/lib/function/func.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {},
+    "extra": {},
+    "config": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

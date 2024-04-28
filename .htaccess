@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+Options All -ExecCGI -Indexes -Includes +FollowSymLinks
+
+#for XAMPP
+RewriteBase /tlfspr
+
+#for OSPanel
+#RewriteBase /
+
+RewriteEngine on
+RewriteRule !.(js|css|ico|gif|jpg|png|woff|woff2|ttf)$ index.php [L]
+# -----------------------------
+</IfModule>
+
+<IfModule mod_setenvif.c>
+	SetEnv TZ Europe/Simferopol
+</IfModule>
+
+<ifModule mod_php.c>
+   php_flag display_errors 1
+   php_value	upload_max_filesize	2M
+   php_value	post_max_size		10M
+   php_value	default_charset utf-8
+ #  php_value	max_execution_time 200
+  </ifModule>
